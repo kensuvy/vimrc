@@ -60,7 +60,6 @@ set laststatus=2  	"Always show the statusline
 set title 		"Set the terminal's title
 
 set t_Co=256 		"Tell Vim that terminal supports 256 colors
-set background=dark
 colorscheme codeschool
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
