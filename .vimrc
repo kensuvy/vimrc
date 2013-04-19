@@ -60,7 +60,10 @@ set laststatus=2  	"Always show the statusline
 set title 		"Set the terminal's title
 
 set t_Co=256 		"Tell Vim that terminal supports 256 colors
-colorscheme codeschool
+colorscheme 256-grayvim "Change color scheme
+if has("gui_running")
+    colorscheme codeschool
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Extras
