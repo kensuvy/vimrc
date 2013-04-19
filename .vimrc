@@ -12,6 +12,15 @@ filetype off    	"Filetype detection off. Necessary on some Linux distros to pro
 "Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+	" Brief help
+	" :BundleList          - list configured bundles
+	" :BundleInstall(!)    - install(update) bundles
+	" :BundleSearch(!) foo - search(or refresh cache first) for foo
+	" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+	"
+	" see :h vundle for more details or wiki for FAQ
+	" NOTE: comments after Bundle command are not allowed..
+
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -21,21 +30,6 @@ Bundle 'gmarik/vundle'
 
 "Better statusline
 Bundle 'Lokaltog/vim-powerline'
-
-"Support for Google Go
-Bundle	'ralph/go.vim'
-
-"Suport for .wiki files
-Bundle 'vim-scripts/mediawiki'
-
-"Java autocomplete
-Bundle 'vim-scripts/javacomplete'
-
-"Python autocomplete
-Bundle 'davidhalter/jedi-vim'
-
-"C/C++ autocomplete
-Bundle 'Valloric/YouCompleteMe'
  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -56,19 +50,23 @@ set number		"Show numbers of lines
 set nowrap		"Turn off text wrap
 set autoindent  	"Turn on autoindent
 
+set mouse=a		"Turn on mouse in all modes
+
 set laststatus=2  	"Always show the statusline
 set title 		"Set the terminal's title
 
 set t_Co=256 		"Tell Vim that terminal supports 256 colors
 colorscheme 256-grayvim "Change color scheme
-if has("gui_running")
-    colorscheme codeschool
+if has("gui_running")	"if GUI is running
+    colorscheme codeschool	"Different color scheme if GUI is running
 endif
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Extras
+"FileType
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype on 		"Filetype detection back on
 filetype plugin on	"Enable loading the plugin files for specific file types
 filetype indent on     	"Enable loading the indent file for specific file types
+
 
